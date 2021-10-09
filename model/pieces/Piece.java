@@ -1,4 +1,4 @@
-package pieces;
+package model.pieces;
 
 public abstract class Piece {
 	protected String _name;

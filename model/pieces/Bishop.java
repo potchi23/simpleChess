@@ -1,4 +1,4 @@
-package pieces;
+package model.pieces;
 
 public class Bishop extends Piece{
 	public Bishop(String color, int x, int y) {

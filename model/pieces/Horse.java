@@ -1,4 +1,4 @@
-package pieces;
+package model.pieces;
 
 public class Horse extends Piece{
 	public Horse(String color, int x, int y) {

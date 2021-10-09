@@ -1,4 +1,4 @@
-package pieces;
+package model.pieces;
 
 public class Tower extends Piece{
 	public Tower(String color, int x, int y) {

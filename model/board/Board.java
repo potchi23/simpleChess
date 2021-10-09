@@ -1,5 +1,5 @@
-package board;
-import pieces.*;
+package model.board;
+import model.pieces.*;
 
 public class Board {
 	private Piece[][] pieces = new Piece[64][64];

@@ -1,5 +1,5 @@
 package launcher;
-import board.Board;
+import model.board.Board;
 
 
 public class Main {
