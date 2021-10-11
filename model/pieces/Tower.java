@@ -6,8 +6,16 @@ public class Tower extends Piece{
 	}
 
 	@Override
-	public void isValidMove() {
+	public boolean isValidMove(Piece[][] pieces, int new_x, int new_y) {
 		// TODO Auto-generated method stub
 		
+		return true;
+	}
+	
+	public void move(Piece[][] pieces, int new_x, int new_y) {
+		pieces[new_x][new_y] = this;
+		pieces[_x][_y] = null;
+		
+		super.move(pieces, new_x, new_y);
 	}
 }

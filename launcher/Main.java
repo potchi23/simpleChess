@@ -1,14 +1,23 @@
 package launcher;
-import model.board.Board;
 
+import Exceptions.GameExceptions;
+import controller.Game;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Board board = new Board();
+		Game game = new Game();
 		
-		System.out.println(board.renderBoard());
+		while(true) {
+			
+			try {
+				game.initGame();
+			}
+			catch(GameExceptions e) {
+				System.out.println(e.getMessage());
+			}
+		}
 	}
 
 }

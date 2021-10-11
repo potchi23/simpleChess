@@ -43,10 +43,10 @@ public abstract class Piece {
 		return _symbol;
 	}
 	
-	public void move(int x, int y) {
-		setX(x);
-		setY(y);
+	public void move(Piece[][] pieces, int new_x, int new_y) {		
+		setX(new_x);
+		setY(new_y);
 	}
 	
-	public abstract void isValidMove();
+	public abstract boolean isValidMove(Piece[][] pieces, int new_x, int new_y);
 }

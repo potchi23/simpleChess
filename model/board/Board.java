@@ -41,19 +41,23 @@ public class Board {
 			rowBuilder.append("  ---------------------------------\n");
 			if(i != 8) {
 				rowBuilder.append(i)
-				  .append(" | ").append( pieces[0][i] == null ? " " : pieces[0][i].getSymbol())
-				  .append(" | ").append( pieces[1][i] == null ? " " : pieces[1][i].getSymbol())
-				  .append(" | ").append( pieces[2][i] == null ? " " : pieces[2][i].getSymbol())
-				  .append(" | ").append( pieces[3][i] == null ? " " : pieces[3][i].getSymbol())
-				  .append(" | ").append( pieces[4][i] == null ? " " : pieces[4][i].getSymbol())
-				  .append(" | ").append( pieces[5][i] == null ? " " : pieces[5][i].getSymbol())
-				  .append(" | ").append( pieces[6][i] == null ? " " : pieces[6][i].getSymbol())
-				  .append(" | ").append( pieces[7][i] == null ? " " : pieces[7][i].getSymbol())
+				  .append(" | ").append(pieces[0][i] == null ? " " : pieces[0][i].getSymbol())
+				  .append(" | ").append(pieces[1][i] == null ? " " : pieces[1][i].getSymbol())
+				  .append(" | ").append(pieces[2][i] == null ? " " : pieces[2][i].getSymbol())
+				  .append(" | ").append(pieces[3][i] == null ? " " : pieces[3][i].getSymbol())
+				  .append(" | ").append(pieces[4][i] == null ? " " : pieces[4][i].getSymbol())
+				  .append(" | ").append(pieces[5][i] == null ? " " : pieces[5][i].getSymbol())
+				  .append(" | ").append(pieces[6][i] == null ? " " : pieces[6][i].getSymbol())
+				  .append(" | ").append(pieces[7][i] == null ? " " : pieces[7][i].getSymbol())
 				  .append(" | " + (i) + "\n");
 			}
 		}
-		rowBuilder.append("    a   b   c   d   e   f   g   h  \n");
+		rowBuilder.append("    0   1   2   3   4   5   6   7  \n");
 		
 		return rowBuilder.toString();
+	}
+	
+	public Piece[][] getPieces() {
+		return this.pieces;
 	}
 }
