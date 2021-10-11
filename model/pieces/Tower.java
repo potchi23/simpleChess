@@ -8,6 +8,7 @@ public class Tower extends Piece{
 	@Override
 	public boolean isValidMove(Piece[][] pieces, int new_x, int new_y) {
 		// TODO Auto-generated method stub
+		boolean valid;
 		
 		return true;
 	}

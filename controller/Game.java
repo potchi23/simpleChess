@@ -18,28 +18,21 @@ public class Game {
 	}
 	
 	public void initGame() throws GameExceptions{
-		int old_x, old_y, new_x, new_y;
 		Piece[][] pieces = _board.getPieces();
 		
-		System.out.println("\nTurn: " + _turn);
-		System.out.println(_board.renderBoard());
+		printBoard();
 		
-		int[] old_position = selectPieceFromInput(pieces);
-		old_x = old_position[0];
-		old_y = old_position[1];
-		
-		int[] new_position = getNewPositionFromInput(pieces, old_x, old_y);
-		new_x = new_position[0];
-		new_y = new_position[1];
-		
-		
-		movePiece(pieces, old_x, old_y, new_x, new_y);
+		int[] old_position = selectPieceFromInput(pieces);		
+		int[] new_position = getNewPositionFromInput(pieces, old_position[0], old_position[1]);
+
+		movePiece(pieces, old_position[0], old_position[1], new_position[0], new_position[1]);
 				
 		changeTurn();
 	}
 	
-	public void movePiece(Piece[][] pieces, int old_x, int old_y, int new_x, int new_y) {
-		pieces[old_x][old_y].move(pieces, new_x, new_y);
+	public void printBoard() {
+		System.out.println("\nTurn: " + _turn);
+		System.out.println(_board.renderBoard());
 	}
 	
 	public int[] selectPieceFromInput(Piece[][] pieces) throws GameExceptions{
@@ -72,6 +65,10 @@ public class Game {
 		}
 		
 		return newPosition;
+	}
+	
+	public void movePiece(Piece[][] pieces, int old_x, int old_y, int new_x, int new_y) {
+		pieces[old_x][old_y].move(pieces, new_x, new_y);
 	}
 	
 	public void changeTurn() {
