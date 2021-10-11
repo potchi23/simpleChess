@@ -14,7 +14,7 @@ public class Pawn extends Piece{
 		boolean valid;
 		
 		if(_color == "white") {
-			valid = (new_x >= 0 && new_x <= 7 && new_y >= 0 && new_y <= 7) || // New position is inside the boundaries
+			valid = (new_x >= 0 && new_x <= 7 && new_y >= 0 && new_y <= 7) && // New position is inside the boundaries
 					((new_y == _y - 1) && (pieces[new_x][new_y] == null)) || // There's no block
 					(((new_x == _x - 1) && (new_y == _y - 1) && (pieces[new_x][new_y] != null && pieces[new_x][new_y].getColor() != _color))) || // Can take a piece
 					(((new_x == _x + 1) && (new_y == _y - 1) && (pieces[new_x][new_y] != null && pieces[new_x][new_y].getColor() != _color))) || // Can take a piece
@@ -22,7 +22,7 @@ public class Pawn extends Piece{
 					? true : false;
 		}
 		else {
-			valid = (new_x >= 0 && new_x <= 7 && new_y >= 0 && new_y <= 7) || // New position is inside the boundaries
+			valid = (new_x >= 0 && new_x <= 7 && new_y >= 0 && new_y <= 7) && // New position is inside the boundaries
 					(new_y == _y + 1) ||  (!_touched && new_y == _y + 2) || // There's no block
 					(((new_x == _x - 1) && (new_y == _y + 1) && (pieces[new_x][new_y] != null && pieces[new_x][new_y].getColor() != _color))) || // Can take a piece
 					(((new_x == _x + 1) && (new_y == _y + 1) && (pieces[new_x][new_y] != null && pieces[new_x][new_y].getColor() != _color))) || // Can take a piece
